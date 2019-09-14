@@ -1,0 +1,218 @@
+import random
+
+long_tones = [1, 2]
+single_artic = list(range(5, 11))
+slurred_scale = list(range(15, 18))
+low_bugle = list(range(18, 23))
+high_bugle = list(range(48, 64))
+flexibility = list(range(23, 45))
+breath_control = [45, 46]
+tempos = list(range(60, 121, 12))
+scales = ['C', 'C#/Db', 'D', 'Eb', 'E', 'F', 'F#/Gb', 'G', 'Ab', 'A', 'Bb', 'B']
+full_scales = {
+				"major" : ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'Bb', 'B'],
+				"minor" : { "natural": ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'Bb', 'B'],
+   	 						"harmonic" : ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'Bb', 'B'],
+							"melodic" : ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'Bb', 'B']}
+	}
+
+def quick_warmup():
+	"""Randomly generated quick warmup routine"""
+
+	"""Select long tone exercise"""
+	print(f'Quick Warmup:\n\n\tLong tones:\n\t\tEx. {long_tones[1]}\n\t\tSet your metronome to {tempos[0]} bpm.\n\t\tThe long tone exercises begin on page 11.\n')
+
+
+	"""Select articulation exercise"""
+	articulation = random.choice(single_artic)
+	tempo = random.choice(tempos)
+	print(f'\tArticulation:\n\t\tEx. {articulation}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe articulation exercises begin on page 13.\n')
+
+	"""Select bugle exercise"""
+	bugles = random.choice(high_bugle)
+	tempo = random.choice(tempos)
+	print(f'\tBugles:\n\t\tEx. {bugles}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe bugle exercises begin on page 35.\n')
+
+	"""Select flexibility exercise"""
+	flex = random.choice(flexibility)
+	tempo = random.choice(tempos)
+	print(f'\tFlexibility:\n\t\tEx. {flex}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe flexibility exercises begin on page 23.\n')
+
+	"""Select scale of the day"""
+	scale = random.choice(scales)
+	tempo = random.choice(tempos)
+	print(f'\tScale of the day:\n\t\t{scale}\n\t\tSet your metronome to {tempo} bpm.\n\t\tFind the scale patterns beginning on page 113.\n' )
+
+def ms_routine():
+	"""Randomly generated routine for middle school students"""
+
+	"""Select long tone exercise"""
+	print(f'Middle School Routine:\n\n\tLong tones:\n\t\tEx. {long_tones[0]}\n\t\tSet your metronome to {tempos[0]} bpm.\n\t\tThe long tone exercises begin on page 11.\n')
+
+	"""Select articulation exercise"""
+	articulation = random.choice(single_artic)
+	tempo = random.choice(tempos[:1])
+	print(f'\tArticulation:\n\t\tEx. {articulation}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe articulation exercises begin on page 13.\n')
+
+	"""Select bugle exercise"""
+	bugles = random.choice(low_bugle[:2])
+	tempo = random.choice(tempos[:1])
+	print(f'\tBugles:\n\t\tEx. {bugles}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe bugle exercises begin on page 20.\n')
+
+	"""Select flexibility exercise"""
+	flex = random.choice(flexibility[:5])
+	tempo = random.choice(tempos[:1])
+	print(f'\tFlexibility:\n\t\tEx. {flex}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe flexibility exercises begin on page 23.\n')
+
+	"""Select scale of the day"""
+	beg_scale = ['Eb', 'F', 'Bb',]
+	scale = random.choice(beg_scale)
+	tempo = random.choice(tempos[:1])
+	print(f'\tScale of the day:\n\t\t{scale}\n\t\tSet your metronome to {tempo} bpm.\n\t\tFind the scale patterns beginning on page 113.\n' )
+
+
+def hs1_routine():
+	"""Randomly generated routine for lower class HS students"""
+
+	"""Select long tone exercise"""
+	print(f'High School Routine:\n\n\tLong tones:\n\t\tEx. {long_tones[0]}\n\t\tSet your metronome to {tempos[0]} bpm.\n\t\tThe long tone exercises begin on page 11.\n')
+
+	"""Select articulation exercise"""
+	articulation = random.choice(single_artic)
+	tempo = random.choice(tempos[:2])
+	print(f'\tArticulation:\n\t\tEx. {articulation}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe articulation exercises begin on page 13.\n')
+
+	"""Select bugle exercise"""
+	bugles = random.choice(low_bugle)
+	tempo = random.choice(tempos[:3])
+	print(f'\tBugles:\n\t\tEx. {bugles}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe bugle exercises begin on page 20.\n')
+
+	"""Select flexibility exercise"""
+	flex = random.choice(flexibility[:5])
+	tempo = random.choice(tempos[:2])
+	print(f'\tFlexibility:\n\t\tEx. {flex}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe flexibility exercises begin on page 23.\n')
+
+	"""Select breath control exercise"""
+	bc = random.choice(breath_control)
+	tempo = random.choice(tempos[4:])
+	print(f'\tBreath Control:\n\t\tEx. {bc}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe breath control exercises begin on page 32.\n')
+
+	"""Select scale of the day"""
+	hs1_scale = ['Eb', 'F', 'Bb', 'Ab', 'Db', 'Gb']
+	scale = random.choice(hs1_scale)
+	tempo = random.choice(tempos[:2])
+	print(f'\tScale of the day:\n\t\t{scale}\n\t\tSet your metronome to {tempo} bpm.\n\t\tFind the scale patterns beginning on page 113.\n' )
+
+def hs2_routine():
+	"""Randomly generated routine for upper class HS students"""
+
+	"""Select long tone exercise"""
+	print(f'High School Routine:\n\n\tLong tones:\n\t\tEx. {long_tones[0]}\n\t\tSet your metronome to {tempos[0]} bpm.\n\t\tThe long tone exercises begin on page 11.\n')
+
+	"""Select articulation exercise"""
+	articulation = random.choice(single_artic)
+	tempo = random.choice(tempos[:3])
+	print(f'\tArticulation:\n\t\tEx. {articulation}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe articulation exercises begin on page 13.\n')
+
+	"""Select bugle exercise"""
+	bugles = random.choice(high_bugle[:6])
+	tempo = random.choice(tempos[:3])
+	print(f'\tBugles:\n\t\tEx. {bugles}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe bugle exercises begin on page 35.\n')
+
+	"""Select flexibility exercise"""
+	flex = random.choice(flexibility)
+	tempo = random.choice(tempos[:3])
+	print(f'\tFlexibility:\n\t\tEx. {flex}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe flexibility exercises begin on page 23.\n')
+
+	"""Select breath control exercise"""
+	bc = random.choice(breath_control)
+	tempo = random.choice(tempos[3:])
+	print(f'\tBreath Control:\n\t\tEx. {bc}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe breath control exercises begin on page 32.\n')
+
+	"""Select scale of the day"""
+	scale = random.choice(scales)
+	tempo = random.choice(tempos[:3])
+	print(f'\tScale of the day:\n\t\t{scale}\n\t\tSet your metronome to {tempo} bpm.\n\t\tFind the scale patterns beginning on page 113.\n' )
+
+def advanced_routine():
+	"""Randomly generated routine for upper class HS students"""
+
+	"""Select long tone exercise"""
+	print(f'Professional/College Routine:\n\n\tLong tones:\n\t\tEx. {long_tones[0]}\n\t\tSet your metronome to {tempos[0]} bpm.\n\t\tThe long tone exercises begin on page 11.\n')
+
+	"""Select articulation exercise"""
+	articulation = random.choice(single_artic)
+	tempo = random.choice(tempos)
+	print(f'\tArticulation:\n\t\tEx. {articulation}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe articulation exercises begin on page 13.\n')
+
+	"""Select slurred scale exercise"""
+	slur_scale = random.choice(slurred_scale)
+	tempo = random.choice(tempos)
+	print(f'\tSlurred Scale:\n\t\tEx. {slur_scale}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe slurred scale exercises begin on page 18.\n')
+
+	"""Select bugle exercise"""
+	bugles = random.choice(high_bugle)
+	tempo = random.choice(tempos)
+	print(f'\tBugles:\n\t\tEx. {bugles}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe bugle exercises begin on page 35.\n')
+
+	"""Select flexibility exercise"""
+	flex = random.choice(flexibility)
+	tempo = random.choice(tempos)
+	print(f'\tFlexibility:\n\t\tEx. {flex}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe flexibility exercises begin on page 23.\n')
+
+	"""Select breath control exercise"""
+	bc = random.choice(breath_control)
+	tempo = random.choice(tempos)
+	print(f'\tBreath Control:\n\t\tEx. {bc}\n\t\tSet your metronome to {tempo} bpm.\n\t\tThe breath control exercises begin on page 32.\n')
+
+	"""Select scale of the day"""
+	scale = random.choice(scales)
+	tempo = random.choice(tempos)
+	print(f'\tScale of the day:\n\t\t{scale}\n\t\tSet your metronome to {tempo} bpm.\n\t\tFind the scale patterns beginning on page 113.\n' )
+
+
+def routine():
+	"""Randomly generate a Remington routine based on playing level"""
+
+	response = input('Describe your playing level:\n\n\tMiddle School\n\tHigh School\n\tCollege\n\tProfessional\n\n')
+
+	"""Determine what level the player is at"""
+	if response == 'college':
+		print('Here is your autogenerated Remington warmup routine!\n')
+		advanced_routine()
+
+	elif response == 'professional':
+		print('Here is your autogenerated Remington warmup routine!\n')
+		advanced_routine()
+
+	else:
+		"""Logic for students still in middle or high school"""
+
+		response = input('What grade are you in?\n\n')
+		if int(response) <= 7:
+			print('\nHere is your autogenerated Remington warmup routine!\n')
+			ms_routine()
+		elif int(response) <= 10 and int(response) >= 8:
+			print('\nHere is your autogenerated Remington warmup routine!\n')
+			hs1_routine()
+		else:
+			print('\nHere is your autogenerated Remington warmup routine!\n')
+			hs2_routine()
+
+
+
+
+
+routine()
+
+
+
+
+
+
+
+
+
+
+
+
